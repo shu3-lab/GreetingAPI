@@ -1,17 +1,19 @@
 package com.example.myapi.domain;
 
-import com.example.myapi.entity.Greeting;
-
 public class GreetingDomain {
+
+    private static final String HELLO = "Hello, everyone!";
+    private static final String MORNING = "Good morning, everyone!";
+    private static final String EVENING = "Good evening, everyone!";
 
     public String responseGreeting(String sentence) {
         String response = "";
         if("hello".equals(sentence)){
-            response = Greeting.HELLO;
+            response = HELLO;
         } else if ("morning".equals(sentence)){
-            response = Greeting.MORNING;
+            response = MORNING;
         } else if ("evening".equals(sentence)){
-            response = Greeting.EVENING;
+            response = EVENING;
         } else {
             response = "Missing your choice...";
         }
