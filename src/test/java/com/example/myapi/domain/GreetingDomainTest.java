@@ -2,8 +2,6 @@ package com.example.myapi.domain;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.example.myapi.domain.GreetingDomain;
-
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
