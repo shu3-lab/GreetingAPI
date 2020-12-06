@@ -1,4 +1,4 @@
-package domain;
+package com.example.myapi.domain;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
