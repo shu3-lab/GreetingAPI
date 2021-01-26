@@ -23,4 +23,14 @@ public class ExceptionHandler {
         return errorMap;
     }
     
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @org.springframework.web.bind.annotation.ExceptionHandler({ LengthLimitException.class })
+    @ResponseBody    
+    public Map<String, Object> handleLengthLimit() {
+        Map<String, Object> erroMap = new HashMap<String, Object>();
+        erroMap.put("message", "The number of arguments is exceeded.");
+        erroMap.put("status", HttpStatus.BAD_REQUEST);
+
+        return erroMap;
+    }
 }
