@@ -25,10 +25,17 @@ public class GreetingServiceTest {
 
     @Test
     public void case02() {
-        String arg = "012345678901234567890123456789";
+        String arg = "012345678901234567890";
         Assertions.assertThrows(LengthLimitException.class, () -> {
             service.responseGreeting(arg);
         });
+    }
+
+    @Test
+    public void case03() {
+        String arg = "01234567890123456789";
+        String actual = service.responseGreeting(arg);
+        assertNotNull(actual);
     }
 
 }
